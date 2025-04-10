@@ -28,6 +28,156 @@ const stateData: Record<string, {
   festivals: { name: string; imageLink: string }[];
   traditionalDress: { name: string; imageLink: string }[];
 }> = {
+  //J&K
+  'material': {
+  name: 'Jammu and Kashmir',
+  description: 'Northernmost union territory, known for the Himalayas, Wazwan cuisine and Kashmiri handicrafts.',
+  population: '12.5 million (2025 est.)',
+  languages: ['Kashmiri', 'Urdu', 'Hindi', 'Dogri', 'English'],
+  food: [
+    { name: 'Rogan Josh', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rogan_Josh.JPG' },  // :contentReference[oaicite:0]{index=0}
+    { name: 'Yakhni',    imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Yakhni_from_kashmir.jpg' },  // :contentReference[oaicite:1]{index=1}
+    { name: 'Gushtaba',  imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Gushtaba.JPG' }  // :contentReference[oaicite:2]{index=2}
+  ],
+  dances: [
+    { name: 'Rouf',      imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rouf_Dance.jpg' },  // :contentReference[oaicite:3]{index=3}
+    { name: 'Bhand Pather', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bhand_Pather.jpg' },  // :contentReference[oaicite:4]{index=4}
+    { name: 'Dumhal',    imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Dhamali_Shah.jpg' }  // :contentReference[oaicite:5]{index=5}
+  ],
+  famousPlaces: [
+    { name: 'Dal Lake', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Dal_Lake.jpg' }, // need to pick a Dal Lake image
+    { name: 'Gulmarg',  imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Gulmarg.jpg' },  // need to pick a Gulmarg image
+    { name: 'Vaishno Devi Temple', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Vaishno_Devi_Temple.jpg' } // need a correct link
+  ],
+  festivals: [
+    { name: 'Hemis Festival', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemis_Monastery_Festival_1.jpg' },  // :contentReference[oaicite:6]{index=6}
+    { name: 'Tulip Festival',  imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tulip_Garden_in_Kashmir.jpg' },  // :contentReference[oaicite:7]{index=7}
+    { name: 'Baisakhi',        imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Baisakhi_Celebration.jpg' } // need a Baisakhi image
+  ],
+  traditionalDress: [
+    { name: 'Pheran',     imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kashmiri_Pheran.jpg' }, // need link
+    { name: 'Kashmiri Cap', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Karakuli_Cap.jpg' } // need link
+  ]
+},
+'Himachal_pradesh': {
+  name: 'Himachal Pradesh',
+  description: 'Hill state known for apple orchards, temples and snow‑capped mountains.',
+  population: '7.5 million (2025 est.)',
+  languages: ['Hindi', 'Pahari'],
+  food: [
+    { name: 'Chana Madra', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Chana_Madra.jpg' },
+    { name: 'Dham',        imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Himachali_Dham.jpg' },
+    { name: 'Babru',       imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Babru.jpg' }
+  ],
+  dances: [
+    { name: 'Nati',       imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nati_dance.jpg' },
+    { name: 'Kullu Dance', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kullu_Dance.jpg' }
+  ],
+  famousPlaces: [
+    { name: 'Shimla',      imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Shimla_City.jpg' },
+    { name: 'Manali',      imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Manali_Himachal_Pradesh.jpg' },
+    { name: 'Dharamshala', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Dharamshala.jpg' }
+  ],
+  festivals: [
+    { name: 'Kullu Dussehra', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kullu_Dussehra.jpg' },
+    { name: 'Lavi Fair',      imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lavi_Fair.jpg' },
+    { name: 'Shivratri',      imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Shivratri_Celebration.jpg' }
+  ],
+  traditionalDress: [
+    { name: 'Chamba Angrakha', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamba_Angrakha.jpg' },
+    { name: 'Kinnauri Cap',    imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kinnauri_Cap.jpg' }
+  ]
+}
+,'Haryana': {
+  name: 'Haryana',
+  description: 'Agricultural state surrounding Delhi, known for vigorous folk traditions.',
+  population: '28.2 million (2025 est.)',
+  languages: ['Hindi', 'Haryanvi'],
+  food: [
+    { name: 'Bajra Khichdi',    imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bajra_Khichdi.jpg' },
+    { name: 'Kadhi Pakora',     imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kadhi_Pakora.jpg' },
+    { name: 'Besan Masala Roti',imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Besan_Masala_Roti.jpg' }
+  ],
+  dances: [
+    { name: 'Saang',   imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Saang_performance.jpg' },
+    { name: 'Phag',    imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Phag_dance.jpg' }
+  ],
+  famousPlaces: [
+    { name: 'Kurukshetra', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kurukshetra.jpg' },
+    { name: 'Sultanpur Bird Sanctuary', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sultanpur_Bird_Sanctuary.jpg' },
+    { name: 'Pinjore Gardens', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pinjore_Gardens.jpg' }
+  ],
+  festivals: [
+    { name: 'Bharatpur Festival', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bharatpur_Festival.jpg' },
+    { name: 'Surajkund Mela',      imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Surajkund_Mela.jpg' },
+    { name: 'Teej',                imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Teej_festival.jpg' }
+  ],
+  traditionalDress: [
+    { name: 'Dhoti Kurta (Men)', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Dhoti_Kurta.jpg' },
+    { name: 'Ghagra Choli (Women)', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ghagra_Choli.jpg' }
+  ]
+},
+'Punjab': {
+  name: 'Punjab',
+  description: 'Land of five rivers, known for Bhangra, rich cuisine and Sufi shrines.',
+  population: '31.4 million (2025 est.)',
+  languages: ['Punjabi', 'Hindi', 'English'],
+  food: [
+    { name: 'Makki di Roti & Sarson da Saag', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Makki_Roti_Sarson_Saag.jpg' },
+    { name: 'Butter Chicken',                imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Butter_Chicken.jpg' },
+    { name: 'Amritsari Kulcha',               imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Amritsari_Kulcha.jpg' }
+  ],
+  dances: [
+    { name: 'Bhangra', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bhangra_dance.jpg' },
+    { name: 'Giddha',  imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Giddha_dance.jpg' }
+  ],
+  famousPlaces: [
+    { name: 'Golden Temple', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Temple.jpg' },
+    { name: 'Wagah Border',   imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Wagah_Border.jpg' },
+    { name: 'Jallianwala Bagh', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Jallianwala_Bagh.jpg' }
+  ],
+  festivals: [
+    { name: 'Baisakhi', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Baisakhi_Celebration.jpg' },
+    { name: 'Lohri',    imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Lohri.jpg' },
+    { name: 'Hola Mohalla', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Hola_Mohalla.jpg' }
+  ],
+  traditionalDress: [
+    { name: 'Kurta Pyjama (Men)',    imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kurta_Pyjama.jpg' },
+    { name: 'Punjabi Suit (Women)',  imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Punjabi_Suit.jpg' }
+  ]
+}
+,
+'Uttarakhand': {
+  name: 'Uttarakhand',
+  description: 'Land of the Himalayas, yoga and pilgrimage sites like Haridwar and Rishikesh.',
+  population: '11.5 million (2025 est.)',
+  languages: ['Hindi', 'Garhwali', 'Kumaoni'],
+  food: [
+    { name: 'Kafuli',         imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kafuli.jpg' },
+    { name: 'Aloo ke Gutke',  imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Aloo_ke_Gutke.jpg' },
+    { name: 'Mandua ki Roti', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Mandua_Roti.jpg' }
+  ],
+  dances: [
+    { name: 'Garhwali', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Garhwali_dance.jpg' },
+    { name: 'Thandi Raat', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Thandi_Raat_dance.jpg' }
+  ],
+  famousPlaces: [
+    { name: 'Haridwar', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Haridwar.jpg' },
+    { name: 'Rishikesh', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Rishikesh.jpg' },
+    { name: 'Nainital',  imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nainital.jpg' }
+  ],
+  festivals: [
+    { name: 'Kumbh Mela', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kumbh_Mela.jpg' },
+    { name: 'Nanda Devi Festival', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Nanda_Devi_Festival.jpg' },
+    { name: 'Basant Panchami',       imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Basant_Panchami.jpg' }
+  ],
+  traditionalDress: [
+    { name: 'Pichhaura (Women)', imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pichhaura.jpg' },
+    { name: 'Koti (Men)',         imageLink: 'https://commons.wikimedia.org/wiki/Special:FilePath/Koti.jpg' }
+  ]
+}
+,
+
   'Rajasthan': {
     name: 'Rajasthan',
     description:
