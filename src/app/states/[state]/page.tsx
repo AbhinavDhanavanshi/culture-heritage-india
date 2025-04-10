@@ -1,23 +1,27 @@
-import { notFound } from 'next/navigation';
+"use client";
+
+import { notFound, useParams } from 'next/navigation';
+import React from 'react';
 
 const stateData: Record<string, { name: string; description: string }> = {
-  'west-bengal': {
+  'West_Bengal': {
     name: 'West Bengal',
     description: 'Rich in literary and artistic heritage, known for Rabindra Sangeet, Durga Puja, and terracotta temples.',
   },
-  'kerala': {
+  'Kerla': {
     name: 'Kerala',
     description: 'Known for Kathakali, backwaters, Ayurveda, and vibrant classical music and dance traditions.',
   },
-  'rajasthan': {
+  'Rajasthan': {
     name: 'Rajasthan',
     description: 'Famous for folk music, Ghoomar dance, majestic forts, and colorful festivals.',
   },
 };
 
-export default function StatePage({ params }: { params: { state: string } }) {
+export default function StatePage() {
+  const params = useParams<{ state: string }>();
   const state = stateData[params.state];
-
+  console.log(params.state, state);
   if (!state) return notFound();
 
   return (

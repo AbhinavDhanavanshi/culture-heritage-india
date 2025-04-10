@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useGLTF, useCursor } from "@react-three/drei";
 import { a, useSpring } from "@react-spring/three";
-
+import { useRouter } from "next/navigation";
 export function Model(props) {
   const { nodes, materials } = useGLTF("/assets/model.glb");
 
@@ -53,6 +53,7 @@ export function Model(props) {
 function State({ geometry, material }) {
   const [hovered, setHovered] = useState(false);
   const [active, setActive] = useState(false);
+  const router = useRouter();
   // change cursor on hover
   useCursor(hovered);
 
@@ -81,8 +82,11 @@ function State({ geometry, material }) {
       }}
       onClick={(e) => {
         e.stopPropagation();
-        console.log(material.name);
         setActive((a) => !a);
+        const stateName = material.name;
+        console.log(stateName);
+
+        router.push(`/states/${stateName}`);
       }}
     />
   );
