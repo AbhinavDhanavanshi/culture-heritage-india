@@ -1,13 +1,12 @@
-// Model.jsx
 "use client";
 import React, { useState } from "react";
 import { useGLTF, useCursor } from "@react-three/drei";
 import { a, useSpring } from "@react-spring/three";
 import { useRouter } from "next/navigation";
+
 export function Model(props) {
   const { nodes, materials } = useGLTF("/assets/model.glb");
 
-  // map each node to its material
   const states = [
     { geo: nodes.Object_4.geometry, mat: materials.material },
     { geo: nodes.Object_6.geometry, mat: materials.Punjab },
@@ -54,15 +53,48 @@ function State({ geometry, material }) {
   const [hovered, setHovered] = useState(false);
   const [active, setActive] = useState(false);
   const router = useRouter();
-  // change cursor on hover
   useCursor(hovered);
 
-  // spring for lift on hover and scale on click
   const { position, scale } = useSpring({
     position: hovered ? [0.5, 0, 0] : [0, 0, 0],
     scale: active ? [1.2, 1.2, 1.2] : [1, 1, 1],
     config: { mass: 1, tension: 170, friction: 26 },
   });
+
+  // ✅ Material name → State route key mapping
+  const nameMap = {
+    material_7: "uttar-pradesh",
+    material_11: "madhya-pradesh",
+    material_18: "goa",
+    material: "jammu-and-kashmir",
+    Himachal_pradesh: "himachal-pradesh",
+    Kerla: "kerala",
+    West_Bengal: "west-bengal",
+    Andhra_Pradesh: "andhra-pradesh",
+    Tamil_Nadu: "tamil-nadu",
+    Arunachal_Pradesh: "arunachal-pradesh",
+    Uttarakhand: "uttarakhand",
+    Maharashtra: "maharashtra",
+    Karnataka: "karnataka",
+    Telangana: "telangana",
+    Odisha: "odisha",
+    Jharkhand: "jharkhand",
+    Chattisgarh: "chhattisgarh",
+    Gujrat: "gujarat",
+    Sikkim: "sikkim",
+    Punjab: "punjab",
+    Haryana: "haryana",
+    Delhi: "delhi",
+    Rajasthan: "rajasthan",
+    Bihar: "bihar",
+    Assam: "assam",
+    Meghalaya: "meghalaya",
+    Nagaland: "nagaland",
+    Manipur: "manipur",
+    Mizoram: "mizoram",
+    Tripura: "tripura",
+
+  };
 
   return (
     <a.mesh
@@ -83,9 +115,9 @@ function State({ geometry, material }) {
       onClick={(e) => {
         e.stopPropagation();
         setActive((a) => !a);
-        const stateName = material.name;
-        console.log(stateName);
-
+        const rawName = material.name;
+        const stateName = nameMap[rawName] || rawName.toLowerCase().replace(/\s+/g, "-");
+        console.log("Routing to:", stateName);
         router.push(`/states/${stateName}`);
       }}
     />
